@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  background-color: #FCFCFC;
+  font-family: "Nunito", sans-serif;
+}
+
+header {
+    display: none;
+}
+
+.content {
+    display: flex;
+    margin: auto;
+
+    max-width: 1140px;
+}
+
+video {
+  width: 100%;
+}
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 500px;
+  margin: auto;
+}
+#mask {
+  clip-path: url(#svg-path);
+}
+#circle-path {
+    z-index: -3;
+}
+.video-container {
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index: -2;
+}
+.title-container {
+    align-self: center;
+    line-height: 600%;
+    color: #877EA2;
+    margin-top: 20%;
+}
+.title-container h1 {
+    font-size: 5rem;
+}
+.title-container span {
+    color: #130048;
+    font-weight: 800;
+}
+.title-container p {
+    font-size: 1.5rem;
+    width: 700px;
+    line-height: 120%;
+    color: #130048;
+}
+#svg-path {
+    transform-origin: right;
+    transform: translate(150%, 20%) scale(1.2);
+  }
+  #circle-path {
+    transform-origin: right;
+    transform: translate(90%, 60%) scale(1);
+}
+
+  @media only screen and (max-width: 2000px) {
+    #svg-path {
+        transform-origin: right;
+        transform: translate(110%, 20%) scale(0.9);
+    }
+    .circle-svg {
+        transform: translate(80%, 20%) scale(0.1);
+    }
+  }
+  @media only screen and (max-width: 1700px) {
+    .title-container {
+        margin-top: 15%;
+    }
+    #svg-path {
+        transform-origin: right;
+        transform: translate(90%, 10%) scale(0.9);
+    }
+  }
+  @media only screen and (max-width: 1480px) {
+    .title-container {
+        margin-top: 15%;
+    }
+    #svg-path {
+        transform-origin: right;
+        transform: translate(70%, 10%) scale(0.8);
+    }
+  }
+  @media only screen and (max-width: 1350px) {
+    .title-container {
+        margin-top: 10%;
+    }
+    #svg-path {
+        transform-origin: right;
+        transform: translate(50%, 0%) scale(0.7);
+    }
+  }
+  
