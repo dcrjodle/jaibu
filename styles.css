@@ -7,18 +7,30 @@ body {
 header {
     display: none;
 }
-
+footer {
+  display: none;
+}
 .content {
     display: flex;
     margin: auto;
-
+    flex-direction: column;
     max-width: 1140px;
 }
-
-video {
-  width: 100%;
+.overlay {
+  height: 100%;
+  background-color: #EEDD47;
+  opacity: 0.5;
+  z-index: -1;
 }
-svg {
+video {
+  z-index: -2;
+}
+
+video, .hero-mask, .overlay {
+  width: 100%;
+  position: absolute;
+}
+/* svg {
   position: absolute;
   top: 0;
   left: 0;
@@ -26,33 +38,44 @@ svg {
   bottom: 0;
   width: 500px;
   margin: auto;
-}
+} */
 #mask {
   clip-path: url(#svg-path);
 }
 #circle-path {
     z-index: -3;
 }
+.logo-container {
+  margin-top: 2.5rem;
+}
 .video-container {
+  display: inline-block;
     position: absolute;
     top:0;
     right:0;
     bottom:0;
     left:0;
     z-index: -2;
+    padding: 4rem 0 0 15rem;
+    overflow: hidden;
 }
 .title-container {
-    align-self: center;
     line-height: 600%;
-    color: #877EA2;
+    color: #130048;
     margin-top: 20%;
 }
 .title-container h1 {
     font-size: 5rem;
 }
-.title-container span {
-    color: #130048;
+.title-container a {
     font-weight: 800;
+    cursor: pointer;
+    border-bottom: solid 0px #130048;
+    transition: border 0.2s;
+}
+.title-container a:hover {
+  opacity: 0.8;
+  border-bottom: solid 5px #130048;
 }
 .title-container p {
     font-size: 1.5rem;
@@ -60,11 +83,34 @@ svg {
     line-height: 120%;
     color: #130048;
 }
+.button-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+.button-container button{
+  padding: 1rem 2.5rem;
+  font-weight: 800;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.button-container :nth-child(1) {
+  background-color: #EEDD47;
+}
+.button-container :nth-child(2) {
+  background-color: #130048;
+  color: white;
+}
+.button-container button:hover {
+  opacity: 0.8;
+}
 #svg-path {
     transform-origin: right;
-    transform: translate(150%, 20%) scale(1.2);
+    transform: translate(150%, 20%) scale(1);
   }
-  #circle-path {
+#circle-path {
     transform-origin: right;
     transform: translate(90%, 60%) scale(1);
 }
