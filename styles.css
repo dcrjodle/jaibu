@@ -33,28 +33,11 @@ video {
   z-index: -2;
 }
 
-video, .hero-mask, .overlay {
+video, .hero-mask, .overlay, #circle-path {
   width: 100%;
   position: absolute;
 }
-/* svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 500px;
-  margin: auto;
-} */
-#mask {
-  clip-path: url(#svg-path);
-}
-#circle-path {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
+
 .logo-container {
   margin: 5rem 0 5rem;
 }
