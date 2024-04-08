@@ -95,6 +95,8 @@ video, .hero-mask, .overlay, #circle-path {
   border-radius: 6px;
   border: none;
   cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.2s;
 }
 .button-container :nth-child(1) {
   background-color: #EEDD47;
