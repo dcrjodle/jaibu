@@ -4,6 +4,10 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
+div {
+  border: 0.5px solid black;
+}
+
 header {
     display: none;
 }
@@ -11,10 +15,13 @@ footer {
   display: none;
 }
 .content {
-    display: flex;
-    margin: auto;
-    flex-direction: column;
-    max-width: 1140px;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  max-width: 1140px;
+  padding: 1rem;
+  height: 100vh;
+  justify-content: center;
 }
 .overlay {
   height: 100%;
@@ -43,45 +50,55 @@ video, .hero-mask, .overlay {
   clip-path: url(#svg-path);
 }
 #circle-path {
-    z-index: -3;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .logo-container {
-  margin-top: 2.5rem;
+  margin: 5rem 0 5rem;
 }
 .video-container {
   display: inline-block;
-    position: absolute;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
-    z-index: -2;
-    padding: 4rem 0 0 15rem;
-    overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  overflow: hidden;
+  width: 100%;
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
+  height: -moz-available;          /* WebKit-based browsers will ignore this. */
+  height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  height: fill-available;
 }
 .title-container {
-    line-height: 600%;
-    color: #130048;
-    margin-top: 20%;
+  max-width: 50rem;
+  line-height: 600%;
+  color: #130048;
+  margin-bottom: 5rem;
 }
 .title-container h1 {
-    font-size: 5rem;
+  font-size: 5rem;
+}
+.title-container #mobile-header {
+  display: none;
 }
 .title-container a {
-    font-weight: 800;
-    cursor: pointer;
-    border-bottom: solid 0px #130048;
-    transition: border 0.2s;
+  font-weight: 800;
+  cursor: pointer;
+  border-bottom: solid 0px #130048;
+  transition: border 0.2s;
 }
 .title-container a:hover {
   opacity: 0.8;
   border-bottom: solid 5px #130048;
 }
 .title-container p {
-    font-size: 1.5rem;
-    width: 700px;
-    line-height: 120%;
-    color: #130048;
+  font-size: 1.5rem;
+  line-height: 120%;
+  color: #130048;
 }
 .button-container {
   display: flex;
@@ -107,48 +124,27 @@ video, .hero-mask, .overlay {
   opacity: 0.8;
 }
 #svg-path {
-    transform-origin: right;
-    transform: translate(150%, 20%) scale(1);
-  }
-#circle-path {
-    transform-origin: right;
-    transform: translate(90%, 60%) scale(1);
+  transform-origin: right;
+  transform: translate(150%, 20%) scale(1);
 }
-
-  @media only screen and (max-width: 2000px) {
-    #svg-path {
-        transform-origin: right;
-        transform: translate(110%, 20%) scale(0.9);
-    }
-    .circle-svg {
-        transform: translate(80%, 20%) scale(0.1);
-    }
+@media only screen and (max-width: 400px) {
+  .title-container h1 {
+    font-size: 2.4rem;
+    line-height: 120%;
   }
-  @media only screen and (max-width: 1700px) {
-    .title-container {
-        margin-top: 15%;
-    }
-    #svg-path {
-        transform-origin: right;
-        transform: translate(90%, 10%) scale(0.9);
-    }
+  .title-container p {
+    font-size: 1.2rem;
+    line-height: 120%;
   }
-  @media only screen and (max-width: 1480px) {
-    .title-container {
-        margin-top: 15%;
-    }
-    #svg-path {
-        transform-origin: right;
-        transform: translate(70%, 10%) scale(0.8);
-    }
+  .title-container #mobile-header {
+    display: block;
   }
-  @media only screen and (max-width: 1350px) {
-    .title-container {
-        margin-top: 10%;
-    }
-    #svg-path {
-        transform-origin: right;
-        transform: translate(50%, 0%) scale(0.7);
-    }
+  .title-container #desktop-header {
+    display: none;
   }
+  .button-container button{
+    padding: 1rem 1rem;
+    width: 100%;
+  }  
+}
   

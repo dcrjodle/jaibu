@@ -54,15 +54,40 @@
       <h1>Your Website Header</h1>
       <!-- <nav></nav> -->
     </header>
+
+    <div class="video-container">
+      <img src="subtract.svg" class="hero-mask" />
+      <svg
+        id="circle-path"
+        width="400"
+        height="400"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle r="200" cx="200" cy="200" fill="#F4EA90" />
+        Sorry, your browser does not support inline SVG.
+      </svg>
+      <div class="overlay"></div>
+      <video
+        src="https://videos.pexels.com/video-files/5738616/5738616-hd_1920_1080_24fps.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+    </div>
     <div class="content">
       <div class="logo-container">
         <img src="logo.svg" />
       </div>
       <div class="title-container">
-        <h1>
+        <h1 id="desktop-header">
           <span style="opacity: 0.5">Hi, we're </span><a>Jaibu</a> 👋
           <br />
           <span style="opacity: 0.5">Designers based in </span><br />
+          📍<a>Umeå, Sweden</a>
+        </h1>
+        <h1 id="mobile-header">
+          <span style="opacity: 0.5">Hi, we're </span><a>Jaibu</a> 👋
+          <span style="opacity: 0.5">Designers based in </span>
           📍<a>Umeå, Sweden</a>
         </h1>
         <p>
@@ -74,25 +99,6 @@
           <button>Contact Us</button>
         </div>
       </div>
-      <div class="video-container">
-        <img src="subtract.svg" class="hero-mask" />
-        <div class="overlay"></div>
-        <video
-          src="https://videos.pexels.com/video-files/5738616/5738616-hd_1920_1080_24fps.mp4"
-          autoplay
-          muted
-          loop
-        ></video>
-      </div>
-      <svg
-        id="circle-path"
-        width="400"
-        height="400"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle r="200" cx="200" cy="200" fill="#F4EA90" />
-        Sorry, your browser does not support inline SVG.
-      </svg>
     </div>
     <footer>
       <p>&copy; 2024 Your Website. All rights reserved.</p>
